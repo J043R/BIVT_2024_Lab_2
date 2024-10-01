@@ -55,9 +55,23 @@ public class Program
     public bool Task_1_1(double x, double y)
     {
         bool answer = false;
+        double r = 2;
 
         // code here
-
+        Console.WriteLine("¬ведите x:");
+        //x = double.Parse(Console.ReadLine());
+        Console.WriteLine("¬ведите y:");
+        //y = double.Parse(Console.ReadLine());
+        if (Math.Abs(x * x + y * y - r * r) <= 1 / (1000))
+        {
+            Console.WriteLine("True");
+            answer = true;
+        }
+        else
+        {
+            Console.WriteLine("False");
+            answer = false;
+        }
         // end
 
         return answer;
@@ -67,7 +81,20 @@ public class Program
         bool answer = false;
 
         // code here
-
+        Console.WriteLine("¬ведите x:");
+        //x = double.Parse(Console.ReadLine());
+        Console.WriteLine("¬ведите y:");
+        //y = double.Parse(Console.ReadLine());
+        if (y>=0 && (y + Math.Abs(x)) <= 1)
+        {
+            Console.WriteLine("True");
+            answer = true;
+        }
+        else
+        {
+            Console.WriteLine("False");
+            answer = false;
+        }
         // end
 
         return answer;
@@ -77,7 +104,10 @@ public class Program
         double answer = 0;
 
         // code here
-
+        if (a > 0)
+            answer = Math.Max(a, b);
+        else
+            answer = Math.Min(a, b);  
         // end
 
         return answer;
@@ -87,7 +117,7 @@ public class Program
         double answer = 0;
 
         // code here
-
+        answer = Math.Max(Math.Min(a, b), c);
         // end
 
         return answer;
@@ -97,7 +127,14 @@ public class Program
         bool answer = false;
 
         // code here
-
+        double D = 2 * Math.Sqrt(r/Math.PI);
+        double a = Math.Sqrt(s) * Math.Sqrt(2);
+        if (D >= a)
+            answer = true;
+        else
+        {
+            answer = false;
+        }
         // end
 
         return answer;
@@ -107,7 +144,17 @@ public class Program
         bool answer = false;
 
         // code here
-
+        //r = double.Parse(Console.ReadLine());
+        //s = double.Parse(Console.ReadLine());
+        double D = 2 * Math.Sqrt(r / Math.PI);
+        double a = Math.Sqrt(s);
+        if (a >= D)
+            answer = true;
+        else
+        {
+            answer = false;
+        }
+        //Console.WriteLine(answer);
         // end
 
         return answer;
@@ -117,7 +164,10 @@ public class Program
         double answer = 0;
 
         // code here
-
+        if (Math.Abs(x) > 1)
+            answer = 1;
+        else
+            answer = Math.Abs(x);
         // end
 
         return answer;
@@ -127,7 +177,10 @@ public class Program
         double answer = 0;
 
         // code here
-
+        if (Math.Abs(x) >= 1)
+            answer = 0;
+        else
+            answer = (x * x -1);
         // end
 
         return answer;
@@ -137,7 +190,12 @@ public class Program
         double answer = 0;
 
         // code here
-
+        if (x > 0)
+            answer = 1;
+        else if (x <= 0 && x > (-1))
+            answer = 1 + x;
+        else
+            answer = 0;
         // end
 
         return answer;
@@ -147,7 +205,12 @@ public class Program
         double answer = 0;
 
         // code here
-
+        if (x > 1)
+            answer = -1;
+        else if (x <= (-1))
+            answer = 1;
+        else
+            answer = -x;
         // end
 
         return answer;
@@ -160,7 +223,10 @@ public class Program
         double answer = 0;
 
         // code here
-
+        for (int i = 0; i < n; i++)
+            answer += double.Parse(Console.ReadLine());
+        answer /= n;
+        Console.WriteLine(answer);
         // end
 
         // for test input in console: 168, 147, 174, 154, 180, 149, 166, 160, 175, 161
